@@ -1,0 +1,35 @@
+.main-header {
+  padding: 13px 0  14px 0;
+}
+
+.main-header__wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.main-header__toggle {
+  min-width: 24px;
+  min-height: 50px;
+  border: none;
+  background-color: transparent;
+}
+
+.main-header__toggle--close-state {
+  background-image: url(../../img/toggle-open.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  // display: none;
+}
+
+.main-header__toggle--open-state {
+  background-image: url(../../img/toggle-close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
