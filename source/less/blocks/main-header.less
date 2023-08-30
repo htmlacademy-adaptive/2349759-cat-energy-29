@@ -1,5 +1,9 @@
 .main-header {
-  padding: 13px 0  14px 0;
+  padding: 13px 20px 14px 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: relative;
 }
 
 .main-header__wrapper {
@@ -18,18 +22,13 @@
 }
 
 .main-header__toggle--close-state {
-  background-image: url(../../img/toggle-open.svg);
+  background-image: url(../img/toggle-open.svg);
   background-repeat: no-repeat;
   background-position: center;
-  // display: none;
 }
 
 .main-header__toggle--open-state {
-  background-image: url(../../img/toggle-close.svg);
+  background-image: url(../img/toggle-close.svg);
   background-repeat: no-repeat;
   background-position: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  display: none;
 }
