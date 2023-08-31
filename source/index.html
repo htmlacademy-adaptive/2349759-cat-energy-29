@@ -4,48 +4,53 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Кэт энерджи</title>
+  <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="page__body">
   <header class="main-header wrapper">
-    <a class="main-header__logo logo">
-      <img class="main-header__logo-image" src="img/logo-mobile.svg" width="33" height="38" alt="Cat Energy.">
-      <img class="main-header__logo-text logo-text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Cat Energy.">
-    </a>
-    <nav class="main-nav">
+    <div class="main-header__wrapper">
+      <a class="main-header__logo-image logo">
+        <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Cat Energy.">
+      </a>
+      <a class="main-header__logo-text logo">
+        <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Cat Energy.">
+      </a>
+      <button class="main-header__toggle main-header__toggle--close-state" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
+    </div>
+    <nav class="main-nav main-nav--open-state">
       <ul class="main-nav__list">
         <li class="main-nav__item main-nav__item--active">
-          <a href="#">
+          <a class="main-nav__link" href="#">
             Главная
           </a>
         </li>
         <li class="main-nav__item">
-          <a href="catalog.html">
+          <a class="main-nav__link" href="catalog.html">
             Каталог продукции
           </a>
         </li>
         <li class="main-nav__item">
-          <a href="form.html">
+          <a class="main-nav__link" href="form.html">
             Подбор программы
           </a>
         </li>
       </ul>
     </nav>
-    <button class="main-nav__toggle" type="button">
-      <span class="visually-hidden">Открыть меню</span>
-    </button>
   </header>
   <main class="main-container">
     <h1 class="visually-hidden">Cat Energy — питание для котов</h1>
     <section class="promo">
-      <div class="promo__wrapper wrapper">
-        <header class="promo__header">
+      <div class="promo__wrapper">
+        <header class="promo__header wrapper">
           <h2 class="promo__title title">Функциональное питание для котов</h2>
-          <p class="promo__slogan">
+          <p class="promo__description">
             Занялся собой? Займись котом!
           </p>
         </header>
-        <a class="promo__link button" href="#">Подобрать программу</a>
       </div>
+      <a class="promo__link button" href="form.html">Подобрать программу</a>
     </section>
     <section class="programs wrapper">
       <h2 class="visually-hidden">Программы питания для котов</h2>
@@ -84,66 +89,71 @@
       </ul>
     </section>
     <section class="promotion">
-      <h2 class="promotion__title title">Живой пример</h2>
-      <p class="promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <dl class="promotion__list">
-        <div class="promotion__item">
-          <dt class="promotion__number">
-            5 КГ
-          </dt>
-          <dd class="promotion__explanation">
-            снижение веса
-          </dd>
+      <div class="promotion__wrapper wrapper">
+        <h2 class="promotion__title title">Живой пример</h2>
+        <p class="promotion__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <dl class="promotion__list">
+          <div class="promotion__item">
+            <dt class="promotion__number">
+              5 КГ
+            </dt>
+            <dd class="promotion__explanation">
+              снижение<br>веса
+            </dd>
+          </div>
+          <div class="promotion__item">
+            <dt class="promotion__number">
+              60 ДНЕЙ
+            </dt>
+            <dd class="promotion__explanation">
+              затрачено<br>времени
+            </dd>
+          </div>
+        </dl>
+        <p class="promotion__spending">
+          Затраты на питание: 15 000 РУБ.
+        </p>
+        <div class="promotion__example">
+          <img src="img/compare-slider.png" alt="Заглушка-слайдер с котом до/после.">
         </div>
-        <div class="promotion__item">
-          <dt class="promotion__number">
-            60 ДНЕЙ
-          </dt>
-          <dd class="promotion__explanation">
-            затрачено времени
-          </dd>
-        </div>
-      </dl>
-      <p class="promotion__spending">
-        Затраты на питание: 15 000 РУБ.
-      </p>
-      <div class="promotion__example">
-        <img src="img/compare-slider.png" alt="Заглушка-слайдер с котом до/после.">
       </div>
     </section>
-    <section class="address">
-      <div class="address__wrapper">
+    <section class="address address--accent">
+      <div class="address__wrapper wrapper">
         <h2 class="address__title">Приглашаем к сотрудничеству дилеров!</h2>
         <p class="address__description">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </div>
-      <img class="address__map" src="img/map-mobile.png" width="320" height="362" alt="Офис Cat Energy на карте.">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9254.58685059287!2d30.31428114595793!3d59.938283660696435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1692737604373!5m2!1sru!2sru" width="100%" height="450" style="border:0;" align="center" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <!-- <img class="address__map" src="img/map.png" width="320" height="362" alt="Офис Cat Energy на карте."> -->
     </section>
   </main>
-  <footer class="main-footer wrapper">
-    <a class="main-footer__logo logo">
-      <img class="main-footer__logo-text logo-text" src="img/logo-mobile-text.svg" width="128" height="24" alt="Cat Energy.">
-    </a>
-    <ul class="main-footer__social social">
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Мы в Вконтакте</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">Мы в Ютубе</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Мы в Телеграме</span>
-        </a>
-      </li>
-    </ul>
-    <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
-      <span class="copyright__text">HTML Academy</span>
-      <img class="copyright__logo" src="img/logo-academy-mobile.svg" width="27" height="34" alt="Логотип HTML Academy.">
-    </a>
+  <footer class="main-footer">
+    <div class="main-footer__wrapper wrapper">
+      <a class="main-footer__logo logo">
+        <img class="main-footer__logo-text logo-text" src="img/logo-mobile-text.svg" width="128" height="24" alt="Cat Energy.">
+      </a>
+      <ul class="main-footer__social social">
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">
+            <span class="visually-hidden">Мы в Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+            <span class="visually-hidden">Мы в Ютубе</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+            <span class="visually-hidden">Мы в Телеграме</span>
+          </a>
+        </li>
+      </ul>
+      <a class="main-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="copyright__text">HTML Academy</span>
+        <img class="copyright__logo" src="img/logo-academy.svg" width="27" height="34" alt="Логотип HTML Academy.">
+      </a>
+    </div>
   </footer>
 </body>
 </html>
