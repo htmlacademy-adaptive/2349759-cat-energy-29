@@ -32,3 +32,28 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+
+
+@media (min-width:@tablet-width) {
+  .main-header {
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .main-header__wrapper {
+    justify-content: flex-start;
+    position: initial;
+  }
+
+  .main-header__toggle--close-state {
+    display: none;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-header {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}

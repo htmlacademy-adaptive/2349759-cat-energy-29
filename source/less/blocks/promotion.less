@@ -1,7 +1,5 @@
 .promotion {
   background-color: #eaeaea;
-  // padding: 25px 0 40px 0;
-  // box-sizing: border-box;
 }
 
 .promotion__wrapper {
@@ -19,6 +17,7 @@
   font-family: "Lato", sans-serif;
   color: #444444;
   margin-bottom: 20px;
+  max-width: 710px;
 }
 
 .promotion__list {
@@ -26,6 +25,7 @@
   gap: 32px;
   flex-wrap: wrap;
   margin-bottom: 34px;
+  justify-content: center;
 }
 
 .promotion__item {
@@ -43,7 +43,7 @@
   font-weight: 400;
   color: #000000;
   text-align: center;
-  padding: 14px 0 8px 0;
+  padding: 14px 5px 8px 5px;
 }
 
 .promotion__explanation {
@@ -54,7 +54,7 @@
   color: #444444;
   background-color: #eaeaea;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 8px;
   text-align: center;
   width: 87px;
 }
@@ -66,4 +66,74 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+}
+
+.promotion__example {
+  display: block;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .promotion__wrapper {
+    padding-top: 45px;
+    min-height: 1080px;
+    background: linear-gradient(#ffffff 50%, #eaeaea 50%);
+  }
+
+  .promotion__list{
+    justify-content: left;
+  }
+
+  .promotion__item {
+    border-radius: 2px;
+    width: 162px;
+    height: 77px;
+  }
+
+  .promotion__number{
+    font-size: 30px;
+    line-height: 37px;
+    padding: 15px 5px 1px 5px;
+  }
+
+  .promotion__explanation {
+    background-color: #ffffff;
+    font-size: 14px;
+    line-height: 14px;
+    position: relative;
+    bottom: -6px;
+    width: fit-content;
+  }
+
+  .promotion__spending {
+    font-size: 20px;
+    color: #000000;
+    text-align: right;
+    max-width: 180px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promotion__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+    position: relative;
+    min-height: 597px;
+    background: linear-gradient(#ffffff 23%, #f2f2f2 1%);
+  }
+
+  .promotion__description {
+    padding-top: 76px;
+    padding-bottom: 69px;
+  }
+
+  .promotion__explanation {
+    background-color: #f2f2f2;
+  }
+
+  .promotion__example {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

@@ -50,3 +50,34 @@
   color: #000000;
   text-transform: uppercase;
 }
+
+@media (min-width: @tablet-width) {
+  .program {
+    width: 708px;
+  }
+
+  .program__title {
+    margin-left: 0;
+  }
+
+  .program__description {
+    width: 340px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .programs {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
+  .programs__list {
+    margin: 0 auto;
+    gap: 80px;
+    flex-direction: row;
+  }
+
+  .program {
+    width: 570px;
+  }
+}

@@ -22,3 +22,26 @@
   font-family: "Lato", sans-serif;
   margin-left: 80px;
 }
+
+@media (min-width: @tablet-width) {
+  .about__list {
+    gap: 37px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about__item {
+    margin: 0;
+    width: 250px;
+    min-height: 280px;
+    padding: 0;
+    padding-top: 151px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}

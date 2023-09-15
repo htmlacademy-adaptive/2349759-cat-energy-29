@@ -71,7 +71,6 @@
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   text-transform: uppercase;
-  white-space: nowrap;
 }
 
 .field {
@@ -80,7 +79,7 @@
   text-transform: uppercase;
   padding: 14px 12px 13px 15px;
   box-sizing: border-box;
-  width: 100%;
+  flex-grow: 1;
 }
 
 .type-program {
@@ -138,4 +137,98 @@
   display: block;
   padding: 0;
   padding-top: 21px;
+}
+
+@media (min-width: @tablet-width) {
+  .main-form__header {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .main-form__description {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .form__item {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+
+  .field,
+  .field-title {
+    font-size: 20px;
+  }
+
+  .control-title {
+    font-size: 20px;
+  }
+
+  .form__title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+  .comment__input {
+    width: 100%;
+  }
+
+  .additional-options__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+
+  .form__button {
+    min-width: 284px;
+    width: initial;
+    margin-left: 70px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-form__header {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+  .form__item {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+  .form__wrapper {
+    display: flex;
+    padding-top: 66px;
+    padding-bottom: 70px;
+    gap: 80px;
+  }
+
+  .cat-info__list {
+    width: 570px;
+  }
+
+  .type-program {
+    padding: 0;
+  }
+
+  .owner-info__list {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  .owner-info__item {
+    width: 570px;
+    box-sizing: border-box;
+  }
+
+  .owner-info__item-phone {
+    width: initial;
+    flex-grow: 1;
+  }
+
+  .additional-options__list {
+    grid-template-columns: repeat(4, 1fr);
+    gap:initial;
+  }
+  .form__button {
+    margin-left: 110px;
+  }
 }
