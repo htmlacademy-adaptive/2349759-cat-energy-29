@@ -5,6 +5,7 @@
 .promotion__wrapper {
   padding: 25px 20px 40px 20px;
   box-sizing: border-box;
+  width: @mobile-width;
 }
 
 .promotion__title {
@@ -76,8 +77,12 @@
 @media (min-width: @tablet-width) {
   .promotion__wrapper {
     padding-top: 45px;
+    padding-left: 30px;
+    padding-right: 30px;
     min-height: 1080px;
+    width: auto;
     background: linear-gradient(#ffffff 50%, #eaeaea 50%);
+    display: grid;
   }
 
   .promotion__list{

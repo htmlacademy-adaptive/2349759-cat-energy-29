@@ -19,6 +19,7 @@
   min-height: 50px;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 .main-header__toggle--close-state {
@@ -33,12 +34,56 @@
   background-position: center;
 }
 
+.main-nav--open-state {
+  background-color: #ffffff;
+  position: absolute;
+  top: 65px;
+  left: 0;
+  width: 100%;
+}
+
+.main-nav--close-state {
+  display: none;
+}
+
+.main-nav__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav__item {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  border-bottom: 1px solid #E6E6E6;
+}
+
+.main-nav__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 400;
+  color: #000000;
+  background-color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: block;
+  text-align: center;
+}
+
+@media (max-width:320px) {
+  .main-nav--close-state {
+    display:none;
+  }
+}
 
 @media (min-width:@tablet-width) {
   .main-header {
     flex-direction: row;
     padding-left: 30px;
     padding-right: 30px;
+    align-items: center;
   }
 
   .main-header__wrapper {
@@ -46,8 +91,39 @@
     position: initial;
   }
 
-  .main-header__toggle--close-state {
+  .main-header__toggle {
     display: none;
+  }
+
+  .main-nav {
+    display: initial;
+    position: initial;
+    margin-left: auto;
+  }
+
+  .main-nav__list {
+    flex-direction: row;
+    gap: 33px;
+    justify-content: flex-end;
+  }
+
+  .main-nav__item {
+    padding: 0;
+    border-bottom: none;
+  }
+
+  .main-nav__item--active {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-color: #68B738;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 10px;
+  }
+
+  .main-nav__link {
+    font-size: 18px;
+    line-height: 24px;
+    text-align: left;
   }
 }
 
@@ -55,5 +131,16 @@
   .main-header {
     padding-left: 110px;
     padding-right: 110px;
+  }
+
+  .main-nav__item--active {
+    text-decoration-color: #ffffff;
+  }
+
+  .main-nav__link {
+    font-size: 20px;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: transparent;
   }
 }

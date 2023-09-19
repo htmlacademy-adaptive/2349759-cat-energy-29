@@ -11,7 +11,11 @@
   <header class="main-header wrapper">
     <div class="main-header__wrapper">
       <a class="main-header__logo-image logo">
-        <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Cat Energy.">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg" width="70" height="59">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" width="60" height="50">
+          <img class="logo__image" src="img/logo-mobile.svg" width="33" height="38" alt="Cat Energy.">
+        </picture>
       </a>
       <a class="main-header__logo-text logo">
         <img class="logo__text" src="img/logo-mobile-text.svg" width="101" height="18" alt="Cat Energy.">
@@ -20,7 +24,7 @@
         <span class="visually-hidden">Открыть меню</span>
       </button>
     </div>
-    <nav class="main-nav main-nav--open-state">
+    <nav class="main-nav main-nav--close-state">
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="index.html">

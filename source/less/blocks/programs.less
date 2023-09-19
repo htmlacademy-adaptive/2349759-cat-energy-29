@@ -20,8 +20,33 @@
 }
 
 .programs__item {
+  position: relative;
   box-sizing: border-box;
   padding: 30px 20px 18px 20px;
+}
+
+.program--slim::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 53px;
+  background-image: url(../img/cat-program-slim.svg);
+  background-repeat: no-repeat;
+  top: 21px;
+  left: 20px;
+  background-size: 50px 53px;
+}
+
+.program--pro::before {
+  content: "";
+  position: absolute;
+  width: 67px;
+  height: 50px;
+  background-image: url(../img/cat-program-pro.svg);
+  background-repeat: no-repeat;
+  top: 24px;
+  left: 13px;
+  background-size: 67px 50px;
 }
 
 .program__title {
@@ -38,10 +63,15 @@
 
 .program__description {
   font-family: "Lato", sans-serif;
-  margin-bottom: 38px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 23px;
 }
 
 .program__link {
+  display: block;
+  position: relative;
+  width: 100%;
   text-decoration: none;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -49,19 +79,62 @@
   font-weight: 400;
   color: #000000;
   text-transform: uppercase;
+  padding-top: 15px;
+  padding-right: 15px;
+  border-top: 1px solid #d9d9d9;
+}
+
+.program__link::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 10px;
+  margin-left: 15px;
+  background-image: url(../img/programs-arrow.svg);
+  background-repeat: no-repeat;
+  background-position: top right;
 }
 
 @media (min-width: @tablet-width) {
   .program {
     width: 708px;
+    min-height: 372px;
+    padding: 77px 63px 57px 52px;
   }
 
   .program__title {
     margin-left: 0;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
   }
 
   .program__description {
     width: 340px;
+    margin-bottom: 52px;
+  }
+
+  .program--slim::before {
+    width: 200px;
+    height: 200px;
+    background-size: contain;
+    top: 81px;
+    right: 63px;
+    left: auto;
+  }
+
+  .program--pro::before {
+    width: 269px;
+    height: 200px;
+    background-size: contain;
+    top: 91px;
+    right: 29px;
+    left: auto;
+  }
+
+  .program__link {
+    border: none;
+    font-size: 20px;
   }
 }
 
@@ -80,4 +153,30 @@
   .program {
     width: 570px;
   }
+
+  .program__title {
+    padding-left: 160px;
+    margin-bottom: 73px;
+  }
+
+  .program__description {
+    width: auto;
+  }
+
+  .program--slim::before {
+    width: 100px;
+    height: 100px;
+    top: 47px;
+    left: 52px;
+    right: auto;
+  }
+
+  .program--pro::before {
+    width: 134px;
+    height: 100px;
+    top: 47px;
+    left: 33px;
+    right: auto;
+  }
+
 }
