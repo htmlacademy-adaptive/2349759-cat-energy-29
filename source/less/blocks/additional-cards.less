@@ -15,6 +15,29 @@
   padding: 0;
   margin: 0;
   margin-bottom: 36px;
+  position: relative;
+  background-color: transparent;
+}
+
+.additional-cards__title span {
+  display: block;
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  margin-left: -50px;
+}
+
+.additional-cards__title::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #68b738;
+  z-index: -1;
 }
 
 .additional-cards__list {
@@ -26,6 +49,11 @@
 .additional-card {
   width: 280px;
   padding: 13px 0 19px 0;
+  border-top: 1px solid #CDCDCD;
+}
+
+.additional-card:last-child {
+  border-bottom: 1px solid #CDCDCD;
 }
 
 .additional-card__title {
@@ -47,6 +75,11 @@
   justify-content: space-between;
   padding: 13px 0 15px 0;
   margin: 0;
+}
+
+.additional-card__description p {
+  margin: 0;
+  padding: 0;
 }
 
 .additional-card__button {
