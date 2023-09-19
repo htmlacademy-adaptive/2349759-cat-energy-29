@@ -43,3 +43,32 @@
   height: 34px;
   width: 70%;
 }
+
+@media (min-width: @tablet-width) {
+  .main-footer__wrapper{
+    flex-direction: row;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .main-footer__logo {
+    margin-right: auto;
+  }
+
+  .copyright {
+    width: initial;
+    margin-left: auto;
+  }
+
+  .copyright__text {
+    white-space: nowrap;
+    margin-right: 23px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-footer__wrapper {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+}

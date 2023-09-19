@@ -1,6 +1,7 @@
 .about {
   padding: 0 20px 50px 20px;
   box-sizing: border-box;
+  width: 320px;
 }
 
 .about__title {
@@ -20,5 +21,102 @@
 
 .about__item {
   font-family: "Lato", sans-serif;
-  margin-left: 80px;
+  padding-left: 80px;
+  position: relative;
+}
+
+.about__item--icon-leaf::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/about-icon-leaf.svg);
+}
+
+.about__item--icon-watercup::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/about-icon-watercup.svg);
+}
+
+.about__item--icon-eat::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/about-icon-eat.svg);
+}
+
+.about__item--icon-watch::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: block;
+  width: 60px;
+  height: 60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url(../img/about-icon-watch.svg);
+}
+
+@media (min-width: @tablet-width) {
+  .about {
+    width: @tablet-width;
+    padding: 45px 109px 47px 30px;
+  }
+
+  .about__list {
+    gap: 37px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .about__item {
+    margin: 0;
+    padding: 151px 0 57px 0;
+    width: 250px;
+    min-height: 280px;
+    box-sizing: border-box;
+    counter-increment: background-number;
+  }
+
+  .about__item::before {
+    width: 80px;
+    height: 80px;
+    top: 40px;
+    background-size: 80px;
+  }
+
+  .about__item::after {
+    content: counter(background-number);
+    position: absolute;
+    font-family: "Oswald";
+    font-size: 280px;
+    line-height: 280px;
+    color: #F2F2F2;
+    top: 0;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .about {
+    width: @desktop-width;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
