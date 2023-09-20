@@ -17,16 +17,25 @@
 .promotion__description {
   font-family: "Lato", sans-serif;
   color: #444444;
+  padding: 0;
+  margin: 0;
   margin-bottom: 20px;
   max-width: 710px;
 }
 
+.promotion__list-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
 .promotion__list {
-  display: flex;
+  margin: 0;
+  padding: 0;
+  grid-column: -1/1;
+  display: grid;
   gap: 32px;
-  flex-wrap: wrap;
-  margin-bottom: 34px;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
 }
 
 .promotion__item {
@@ -67,6 +76,7 @@
   margin: 0;
   margin-bottom: 20px;
   padding: 0;
+  grid-column: -1/1;
 }
 
 .promotion__example {
@@ -75,24 +85,44 @@
 }
 
 @media (min-width: @tablet-width) {
+  .promotion {
+    background: linear-gradient(#ffffff 58%, #eaeaea 1%);
+  }
+
   .promotion__wrapper {
     padding-top: 45px;
     padding-left: 30px;
     padding-right: 30px;
     min-height: 1080px;
-    width: auto;
-    background: linear-gradient(#ffffff 50%, #eaeaea 50%);
-    display: grid;
+    width: @tablet-width;
+  }
+
+  .promotion__title {
+    margin-bottom: 60px;
+  }
+
+  .promotion__description {
+    margin-bottom: 55px;
   }
 
   .promotion__list{
     justify-content: left;
+    grid-column: initial;
+    gap: 43px;
+  }
+
+  .promotion__list-wrapper{
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 100px;
   }
 
   .promotion__item {
-    border-radius: 2px;
+    border-radius: 3px;
     width: 162px;
     height: 77px;
+    border-color: #cdcdcd;
   }
 
   .promotion__number{
@@ -106,8 +136,12 @@
     font-size: 14px;
     line-height: 14px;
     position: relative;
-    bottom: -6px;
+    bottom: -14px;
     width: fit-content;
+  }
+
+  .promotion__explanation br {
+    display: none;
   }
 
   .promotion__spending {
@@ -115,21 +149,45 @@
     color: #000000;
     text-align: right;
     max-width: 180px;
+    grid-column: initial;
   }
 }
 
 @media (min-width: @desktop-width) {
+  .promotion {
+    background: linear-gradient(#ffffff 23%, #f2f2f2 1%);
+  }
+
   .promotion__wrapper {
     padding-left: 110px;
     padding-right: 110px;
+    padding-bottom: 75px;
     position: relative;
     min-height: 597px;
-    background: linear-gradient(#ffffff 23%, #f2f2f2 1%);
+    width: @desktop-width;
+  }
+
+  .promotion__list{
+    margin-bottom: 55px;
+  }
+
+  .promotion__list-wrapper{
+    margin: 0;
+    display: block;
+    max-width: 440px;
+  }
+
+  .promotion__spending {
+    margin: 0;
+    text-align: left;
+    max-width: initial;
+    width: 100%;
   }
 
   .promotion__description {
     padding-top: 76px;
     padding-bottom: 69px;
+    max-width: 440px;
   }
 
   .promotion__explanation {

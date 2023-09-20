@@ -10,6 +10,7 @@
   flex-direction: column;
   list-style: none;
   padding: 0;
+  margin: 0;
   align-items: center;
 }
 
@@ -20,20 +21,24 @@
   flex-direction: row;
   flex-wrap: wrap;
   box-sizing: border-box;
+  position: relative;
 }
 
 .card__title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   color: #222222;
   text-transform: uppercase;
   margin: 0;
+  padding-top: 53px;
 }
 
 .card__title--narrow {
   width: 80px;
   margin-bottom: 14px;
+  padding: 0;
 }
 
 .card__img {
@@ -67,9 +72,26 @@
 }
 
 .card--show-more {
-  display: block;
-  padding: 25px 0 25px 0;
-  text-align: center;
+  width: 280px;
+  padding: 20px 0 25px 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+  position: relative;
+  align-items: center;
+}
+
+.card--show-more::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/plus.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 30px;
+  height: 30px;
+  top: 25px;
+  left: 45%;
 }
 
 .card__description {
@@ -78,6 +100,20 @@
   line-height: 16px;
   margin: 0;
   padding: 8px 0 21px 0;
+}
+
+@media (max-width:767px) {
+  .cards__item::after {
+  content:" ";
+  width: 100vw;
+	height: 1px;
+	background-color:#D9D9D9;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  right: auto;
+}
 }
 
 @media (min-width: @tablet-width) {
@@ -107,15 +143,20 @@
     margin: 0 auto;
     text-align: center;
     width: 180px;
+    padding: 0;
   }
 
   .card__title--narrow {
     width: 135px;
+    margin-bottom: 25px;
   }
 
   .card__product-info {
     font-size: 16px;
     line-height: 20px;
+    border-bottom: 1px solid #CDCDCD;
+    padding-bottom: 4px;
+    padding-top: 4px;
   }
 
   .card__button {
@@ -125,9 +166,20 @@
   }
 
   .card--show-more {
-    background: linear-gradient(#ffffff 81px, #ffffff 1px);
-    padding-top: 81px;
-    display: flex;
+    padding: 148px 18px 38px 18px;
+    border: 2px solid #F2F2F2;
+    align-self: end;
+    width: 280px;
+    min-height: 429px;
+    position: relative;
+    gap: 23px;
+  }
+
+  .card--show-more::before {
+    width: 60px;
+    height: 60px;
+    top: 50px;
+    left: 40%;
   }
 
   .card__description {
@@ -142,10 +194,14 @@
   }
 
   .cards__list {
-    gap: 63px 80px;
+    gap: 63px 76px;
   }
 
   .card {
+    width: 245px;
+  }
+
+  .card--show-more {
     width: 245px;
   }
 }

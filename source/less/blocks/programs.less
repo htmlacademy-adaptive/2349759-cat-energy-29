@@ -65,34 +65,33 @@
   font-family: "Lato", sans-serif;
   margin: 0;
   padding: 0;
-  margin-bottom: 23px;
+  padding-bottom: 23px;
+  border-bottom: 1px solid #d9d9d9;
 }
 
 .program__link {
-  display: block;
-  position: relative;
-  width: 100%;
-  text-decoration: none;
-  font-family: "Oswald", sans-serif;
-  font-size: 16px;
-  line-height: 16px;
-  font-weight: 400;
+  display: inline-block;
   color: #000000;
+  font-family: "Oswald", serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
   text-transform: uppercase;
-  padding-top: 15px;
-  padding-right: 15px;
-  border-top: 1px solid #d9d9d9;
-}
-
-.program__link::after {
-  content: "";
-  position: absolute;
-  width: 32px;
-  height: 10px;
-  margin-left: 15px;
+  text-decoration: none;
+  padding: 4px;
+  padding-right: 47px;
+  margin-top: 15px;
   background-image: url(../img/programs-arrow.svg);
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: center right;
+
+  &:hover {
+    background-image: url(../img/icon-arrow-long.svg);
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -107,11 +106,13 @@
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 24px;
+    width: 70%;
   }
 
   .program__description {
     width: 340px;
     margin-bottom: 52px;
+    border-bottom: 0;
   }
 
   .program--slim::before {

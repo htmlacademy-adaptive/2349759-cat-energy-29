@@ -10,11 +10,35 @@
   font-family: "Oswald", sans-serif;
   font-size: 24px;
   line-height: 24px;
+  font-weight: 400;
   color: #000000;
   text-align: left;
   padding: 0;
   margin: 0;
   margin-bottom: 36px;
+  position: relative;
+  background-color: transparent;
+}
+
+.additional-cards__title span {
+  display: block;
+  background-color: #ffffff;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: fit-content;
+  margin-left: -50px;
+}
+
+.additional-cards__title::before {
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 2px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #68b738;
+  z-index: -1;
 }
 
 .additional-cards__list {
@@ -26,12 +50,18 @@
 .additional-card {
   width: 280px;
   padding: 13px 0 19px 0;
+  border-top: 1px solid #CDCDCD;
+}
+
+.additional-card:last-child {
+  border-bottom: 1px solid #CDCDCD;
 }
 
 .additional-card__title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 16px;
+  font-weight: 400;
   text-transform: uppercase;
   text-align: left;
   padding: 0;
@@ -49,11 +79,19 @@
   margin: 0;
 }
 
+.additional-card__description p {
+  margin: 0;
+  padding: 0;
+}
+
 .additional-card__button {
   width: 100%;
 }
 
 @media (min-width: @tablet-width) {
+  .additional-cards {
+    padding-bottom: 0;
+  }
   .additional-cards__title {
     font-size: 36px;
     line-height: 36px;
@@ -75,6 +113,8 @@
     align-items: center;
     gap: 25px;
     width: 100%;
+    border-left: 1px solid #CDCDCD;
+    border-right: 1px solid #CDCDCD;
   }
 
   .additional-card__title {
@@ -105,6 +145,7 @@
     grid-template-columns: 3fr 1fr;
     padding-left: 110px;
     padding-right: 110px;
+    padding-bottom: 87px;
   }
 
   .additional-cards__title {
@@ -116,6 +157,8 @@
     padding: 15px 0 17px 0;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+    border-left: 0;
+    border-right: 0;
   }
 
   .additional-card__button {
