@@ -1,5 +1,6 @@
 .main-footer {
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .main-footer__wrapper {
@@ -17,11 +18,40 @@
   flex-wrap: wrap;
   gap: 24px;
   align-items: center;
+  list-style: none;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
 }
 
-.social__item {
+.social__link {
   width: 28px;
   height: 22px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #666666;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.social__link--vkontakte {
+  mask-image: url(../img/vkontakte.svg);
+}
+
+.social__link--youtube {
+  mask-image: url(../img/youtube.svg);
+}
+
+.social__link--telegram {
+  mask-image: url(../img/telegram.svg);
 }
 
 .copyright {
@@ -42,6 +72,25 @@
   text-align: left;
   height: 34px;
   width: 70%;
+}
+
+.copyright__logo {
+  width: 27px;
+  height: 34px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: #444444;
+  background-repeat: no-repeat;
+  background-position: center;
+  mask-image: url(../img/logo-academy.svg);
+
+  &:hover {
+    background-color: #68b738;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {

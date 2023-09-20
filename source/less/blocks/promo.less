@@ -1,10 +1,11 @@
 .promo__wrapper {
   width: auto;
-  height: 302px;
+  min-height: 302px;
   background-image: linear-gradient(rgba(@accent-color, 0.85), rgba(@accent-color, 0.85)), url(../img/cat.png), linear-gradient(#666666,#666666);
   background-repeat: no-repeat;
   background-position: top center;
   margin-bottom: 135px;
+  position: relative;
 }
 
 .promo__title {
@@ -29,7 +30,9 @@
 
 .promo__image {
   display: block;
-  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .promo__link {
@@ -78,7 +81,7 @@
     margin: 0;
     margin-left: 100px;
     position: absolute;
-    margin-top: -600px;
+    margin-top: -50px;
   }
 }
 
@@ -115,7 +118,7 @@
   }
 
   .promo__link {
-    margin-top: -240px;
+    margin-top: -20px;
     margin-left: 190px;
   }
 }
