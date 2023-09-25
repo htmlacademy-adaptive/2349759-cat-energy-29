@@ -12,14 +12,14 @@
   color: #ffffff;
   background-color: transparent;
   text-align: center;
-  padding-top: 27px;
-  padding-bottom: 25px;
+  padding-top: 23px;
+  padding-bottom: 18px;
   margin: 0 auto;
   max-width: 250px;
 }
 
 .promo__description {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   color: #ffffff;
   text-align: center;
   text-transform: uppercase;
@@ -42,7 +42,7 @@
 
 @media (min-width: @tablet-width) {
   .promo {
-    min-height: 840px;
+    min-height: 830px;
     position: relative;
   }
 
@@ -56,8 +56,9 @@
     color: initial;
     max-width: 650px;
     text-align: initial;
-    padding-left: 100px;
+    padding-left: 120px;
     padding-right: 100px;
+    padding-bottom: 40px;
     margin: 0;
     box-sizing: border-box;
   }
@@ -66,7 +67,7 @@
     color: #000000;
     font-size: 20px;
     text-align: initial;
-    padding-left: 100px;
+    padding-left: 120px;
     padding-right: 100px;
     margin-bottom: 50px;
   }
@@ -74,12 +75,15 @@
   .promo__image {
     width: 709px;
     height: 609px;
+    top: 74%;
+    left: 50%;
+    transform: translate(-50%);
   }
 
   .promo__link {
     width: 244px;
     margin: 0;
-    margin-left: 100px;
+    margin-left: 120px;
     position: absolute;
     margin-top: -50px;
   }
@@ -90,20 +94,21 @@
     background-image: linear-gradient(to right, #ffffff 50%, rgba(104, 183, 56, 0.85) 1%), url(../img/cat-desktop.png), linear-gradient(#666666, #666666);
     background-repeat: no-repeat;
     background-position: top right;
-    top: -100px;
+    top: -160px;
     right: 0;
     z-index: -1;
     background-size: auto 694px;
-    min-height: 694px;
+    min-height: 700px;
+    margin-bottom: -35px;
   }
 
   .promo__wrapper {
-   padding-top: 110px;
+   padding-top: 150px;
    margin-left: 80px;
   }
 
   .promo__title {
-    padding: 50px 110px 40px 110px;
+    padding: 75px 110px 40px 110px;
   }
 
   .promo__description {
@@ -114,11 +119,13 @@
   .promo__image {
     width: 552px;
     height: 499px;
-    margin-top: -250px;
+    top: 33%;
+    left: 60%;
+    transform: translate(-61%);
   }
 
   .promo__link {
-    margin-top: -20px;
+    margin-top: 10px;
     margin-left: 190px;
   }
 }

@@ -1,0 +1,70 @@
+.owner-info {
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+
+.owner-info__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+.owner-info__item {
+  display: flex;
+  gap: 13px;
+  width: 100%;
+  align-items: center;
+}
+
+.owner-info__field-email {
+  background-image: url(../img/icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+
+  &:focus-visible {
+    background-image: url(../img/icon-email-focus.svg);
+  }
+
+  &:invalid {
+    background-image: url(../img/icon-email-error.svg);
+  }
+}
+
+.owner-info__field-phone {
+  background-image: url(../img/icon-phone.svg);
+  background-repeat: no-repeat;
+  background-position: center right 12px;
+}
+
+@media (min-width: @tablet-width) {
+  .owner-info {
+    padding-top: 40px;
+  }
+
+  .owner-info__list {
+    padding-top: 40px;
+    gap: 11px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .owner-info__list {
+    flex-direction: row;
+    gap: 80px;
+    width: 1220px;
+  }
+
+  .owner-info__item {
+    width: 570px;
+    box-sizing: border-box;
+  }
+
+  .owner-info__item-phone {
+    width: initial;
+    flex-grow: 1;
+  }
+}

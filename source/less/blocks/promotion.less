@@ -3,7 +3,7 @@
 }
 
 .promotion__wrapper {
-  padding: 25px 20px 40px 20px;
+  padding: 28px 20px 40px 20px;
   box-sizing: border-box;
   width: @mobile-width;
 }
@@ -15,7 +15,7 @@
 }
 
 .promotion__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   color: #444444;
   padding: 0;
   margin: 0;
@@ -47,7 +47,7 @@
 }
 
 .promotion__number {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -57,7 +57,7 @@
 }
 
 .promotion__explanation {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 12px;
   line-height: 12px;
   font-weight: 400;
@@ -70,10 +70,11 @@
 }
 
 .promotion__spending {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   text-transform: uppercase;
   text-align: center;
   margin: 0;
+  margin-top: 15px;
   margin-bottom: 20px;
   padding: 0;
   grid-column: -1/1;
@@ -98,7 +99,7 @@
   }
 
   .promotion__title {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   .promotion__description {
@@ -114,7 +115,7 @@
   .promotion__list-wrapper{
     grid-template-columns: 2fr 1fr;
     align-items: center;
-    gap: 40px;
+    gap: 150px;
     margin-bottom: 100px;
   }
 
@@ -155,20 +156,22 @@
 
 @media (min-width: @desktop-width) {
   .promotion {
-    background: linear-gradient(#ffffff 23%, #f2f2f2 1%);
+    background: linear-gradient(#ffffff 26%, #f2f2f2 1%);
   }
 
   .promotion__wrapper {
     padding-left: 110px;
     padding-right: 110px;
-    padding-bottom: 75px;
+    padding-bottom: 80px;
+    padding-top: 25px;
     position: relative;
-    min-height: 597px;
+    min-height: 500px;
     width: @desktop-width;
   }
 
   .promotion__list{
     margin-bottom: 55px;
+    max-width: 320px;
   }
 
   .promotion__list-wrapper{
@@ -184,10 +187,15 @@
     width: 100%;
   }
 
+  .promotion__prise {
+    margin-left: 60px;
+  }
+
   .promotion__description {
-    padding-top: 76px;
+    padding-top: 87px;
     padding-bottom: 69px;
     max-width: 440px;
+    margin-bottom: 0;
   }
 
   .promotion__explanation {
@@ -196,7 +204,7 @@
 
   .promotion__example {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 25px;
+    right: 108px;
   }
 }

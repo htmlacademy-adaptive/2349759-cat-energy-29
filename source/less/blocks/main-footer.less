@@ -8,7 +8,7 @@
   flex-direction: column;
   gap: 40px;
   align-items: center;
-  padding: 40px 20px 40px 20px;
+  padding: 34px 20px 40px 20px;
   box-sizing: border-box;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .copyright__text {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   color: #444444;
@@ -84,11 +84,11 @@
   background-position: center;
   mask-image: url(../img/logo-academy.svg);
 
-  &:hover {
+  &[href]:hover {
     background-color: #68b738;
   }
 
-  &:active {
+  &[href]:active {
     opacity: 0.3;
   }
 }
@@ -96,12 +96,11 @@
 @media (min-width: @tablet-width) {
   .main-footer__wrapper{
     flex-direction: row;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 50px 30px;
   }
 
   .main-footer__logo {
-    margin-right: auto;
+    margin-right: 120px;
   }
 
   .copyright {
@@ -117,7 +116,10 @@
 
 @media (min-width: @desktop-width) {
   .main-footer__wrapper {
-    padding-left: 110px;
-    padding-right: 110px;
+    padding: 56px 110px;
+  }
+
+  .main-footer__logo {
+    margin-right: 380px;
   }
 }
