@@ -7,7 +7,7 @@
 }
 
 .additional-cards__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 24px;
   font-weight: 400;
@@ -15,7 +15,7 @@
   text-align: left;
   padding: 0;
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   position: relative;
   background-color: transparent;
 }
@@ -58,7 +58,7 @@
 }
 
 .additional-card__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 16px;
   font-weight: 400;
@@ -69,7 +69,7 @@
 }
 
 .additional-card__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-size: 14px;
   line-height: 14px;
   display: flex;
@@ -90,13 +90,14 @@
 
 @media (min-width: @tablet-width) {
   .additional-cards {
+    padding-top: 70px;
     padding-bottom: 0;
   }
   .additional-cards__title {
     font-size: 36px;
     line-height: 36px;
     margin-bottom: 80px;
-    margin-left: 40px;
+    margin-left: 80px;
     align-self: flex-start;
   }
 
@@ -149,8 +150,13 @@
   }
 
   .additional-cards__title {
+    padding-top: 10px;
     margin-left: 0;
     grid-column: -1/1;
+  }
+
+  .additional-cards__title span {
+    margin-left: -15px;
   }
 
   .additional-card {
@@ -161,7 +167,14 @@
     border-right: 0;
   }
 
+  .additional-card__description {
+    min-width: 270px;
+    justify-content: space-between;
+  }
+
   .additional-card__button {
     grid-column: inherit;
+    margin-left: 10px;
+    width: 90%;
   }
 }

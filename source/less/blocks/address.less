@@ -1,5 +1,6 @@
 .address {
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .address--accent {
@@ -12,10 +13,11 @@
   padding: 26px 20px;
   box-sizing: border-box;
   justify-content: center;
+  gap: 20px;
 }
 
 .address__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 400;
@@ -23,18 +25,22 @@
   text-align: left;
   color: #111111;
   max-width: 165px;
+  margin: 0;
+  padding: 0;
 }
 
 .address__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   line-height: 20px;
   max-width: 160px;
+  margin: 0;
+  padding: 0;
 }
 
 @media (min-width: @tablet-width) {
   .address__wrapper{
     justify-content: space-between;
-    padding: 61px 40px;
+    padding: 59px 70px;
   }
 
   .address__title {
@@ -44,6 +50,15 @@
 
   .address__description {
     text-align: right;
+  }
+
+  .address__city {
+    display: block;
+    margin-top: 20px;
+  }
+
+  .address__map {
+    min-height: 400px;
   }
 }
 
@@ -58,7 +73,11 @@
     background-color: #ffffff;
     width: 565px;
     box-sizing: border-box;
-    top: 95px;
+    top: 90px;
     left: 110px;
+  }
+
+  .address__description {
+    text-align: left;
   }
 }

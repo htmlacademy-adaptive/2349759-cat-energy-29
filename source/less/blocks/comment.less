@@ -1,0 +1,39 @@
+.comment {
+  box-sizing: border-box;
+}
+
+.comment__input {
+  min-width: 280px;
+  min-height: 150px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  padding: 14px;
+  padding-left: 15px;
+  resize: none;
+}
+
+@media (min-width: @tablet-width) {
+  .comment {
+    padding-top: 35px;
+  }
+
+  .comment__input {
+    margin-top: 55px;
+    min-width: 628px;
+    min-height: 175px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .comment {
+    padding-top: 45px;
+  }
+
+  .comment__input {
+    margin-top: 40px;
+    margin-left: 2px;
+    min-width: 1220px;
+  }
+}

@@ -50,7 +50,7 @@
 }
 
 .program__title {
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 37px;
   font-weight: 400;
@@ -62,7 +62,7 @@
 }
 
 .program__description {
-  font-family: "Lato", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   margin: 0;
   padding: 0;
   padding-bottom: 23px;
@@ -72,7 +72,7 @@
 .program__link {
   display: inline-block;
   color: #000000;
-  font-family: "Oswald", serif;
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 16px;
@@ -95,6 +95,14 @@
 }
 
 @media (min-width: @tablet-width) {
+  .programs {
+    padding-top: 0;
+  }
+
+  .programs__list {
+    gap: 27px;
+  }
+
   .program {
     width: 708px;
     min-height: 372px;
@@ -110,17 +118,19 @@
   }
 
   .program__description {
+    margin: 0;
+    padding: 0;
     width: 340px;
     margin-bottom: 52px;
     border-bottom: 0;
   }
 
   .program--slim::before {
-    width: 200px;
-    height: 200px;
+    width: 213px;
+    height: 213px;
     background-size: contain;
-    top: 81px;
-    right: 63px;
+    top: 80px;
+    right: 50px;
     left: auto;
   }
 
@@ -134,13 +144,18 @@
   }
 
   .program__link {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
     border: none;
     font-size: 20px;
+    width: 170px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .programs {
+    margin-top: -80px;
     padding-left: 110px;
     padding-right: 110px;
   }
@@ -162,13 +177,18 @@
 
   .program__description {
     width: auto;
+    margin-bottom: 0;
+  }
+  .program__link {
+    padding-top: 0;
+    margin-top: 37px;
   }
 
   .program--slim::before {
-    width: 100px;
-    height: 100px;
-    top: 47px;
-    left: 52px;
+    width: 108px;
+    height: 108px;
+    top: 40px;
+    left: 51px;
     right: auto;
   }
 

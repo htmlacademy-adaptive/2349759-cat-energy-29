@@ -1,0 +1,38 @@
+.cat-info {
+  padding-top: 39px;
+  padding-bottom: 24px;
+}
+
+.cat-info__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.cat-info__item {
+  display: flex;
+  gap: 13px;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: @tablet-width) {
+  .cat-info__list {
+    gap: 12px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .cat-info {
+    padding: 0;
+    padding-top: 39px;
+    padding-bottom: 24px;
+  }
+  .cat-info__list {
+    width: 570px;
+  }
+}
